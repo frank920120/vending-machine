@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "item1": {
+        "id": 1,
+        "name": "LV",
+        "cost": 2,
+        "quantity": 30
+      },
+      "item2": {
+        "id": 2,
+        "name": "Gucci",
+        "cost": 1,
+        "quantity": 30
+      },
+      "item3": {
+        "id": 3,
+        "name": "Prada",
+        "cost": 2.25,
+        "quantity": 30
+      },
+      "item4": {
+        "id": 4,
+        "name": "Chanel",
+        "cost": 4.75,
+        "quantity": 30
+      }
+    }
+  ],
+  "initialCoins": [
+    {
+      "quarter": {
+        "name": "25cents",
+        "price": 0.25,
+        "quantity": 100
+      },
+      "dime": {
+        "name": "10cents",
+        "price": 0.1,
+        "quantity": 100
+      },
+      "nickel": {
+        "name": "50cents",
+        "price": 0.5,
+        "quantity": 100
+      },
+      "loonie": {
+        "name": "1 dollar",
+        "price": 1,
+        "quantity": 100
+      },
+      "toonie": {
+        "name": "2 dollars",
+        "price": 2,
+        "quantity": 100
+      },
+      "fiveDollars": {
+        "name": "5 dollars",
+        "price": 5,
+        "quantity": 100
+      }
+    }
+  ]
+}

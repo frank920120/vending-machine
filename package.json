@@ -1,0 +1,23 @@
+{
+  "name": "vending-machine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frank920120/vending-machine.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frank920120/vending-machine/issues"
+  },
+  "homepage": "https://github.com/frank920120/vending-machine#readme",
+  "devDependencies": {
+    "jest-cli": "^24.8.0"
+  }
+}
