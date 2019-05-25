@@ -67,6 +67,7 @@ describe("vendingMachine", () => {
       });
     });
   });
+  //05
   describe("resupplyOneChange(coinType)", () => {
     describe("when one of the change type needs to be resupplied", () => {
       it("should return all the money with that changetype of maxiumn quantity", () => {
@@ -82,7 +83,7 @@ describe("vendingMachine", () => {
   });
 
   describe("DispenseInventory(payment,item)", () => {
-    //05
+    //06
     describe("when user choose the item that is out of stock", () => {
       it("should throw an error", () => {
         expect(() =>
@@ -90,7 +91,7 @@ describe("vendingMachine", () => {
         ).toThrow("out of stock");
       });
     });
-    //06
+    //07
     describe("when user choose the item that does not exist", () => {
       it("should throw an error", () => {
         expect(() =>
@@ -98,7 +99,7 @@ describe("vendingMachine", () => {
         ).toThrow("item does not exist");
       });
     });
-    //07
+    //08
     describe("when user insert the money that is less than the item price", () => {
       it("should throw an error", () => {
         expect(() =>
@@ -107,7 +108,7 @@ describe("vendingMachine", () => {
       });
     });
 
-    //08
+    //09
     describe("when user insert the correct payment", () => {
       it("should return the item with new quantity", () => {
         expect(vendingMachine.subject.DispenseInventory(2, "Gucci")).toEqual([
@@ -119,7 +120,7 @@ describe("vendingMachine", () => {
       });
     });
   });
-  //09
+  //10
   describe("returnChanges(payment,item)", () => {
     describe("when user finishes the payment", () => {
       it("should return the total change", () => {
