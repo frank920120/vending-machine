@@ -67,6 +67,19 @@ describe("vendingMachine", () => {
       });
     });
   });
+  describe("resupplyOneChange(coinType)", () => {
+    describe("when one of the change type needs to be resupplied", () => {
+      it("should return all the money with that changetype of maxiumn quantity", () => {
+        expect(vendingMachine.subject.resupplyOneChange("quarter")).toEqual([
+          { name: "quarter", price: 0.25, quantity: 100 },
+          { name: "dime", price: 0.1, quantity: 35 },
+          { name: "nickel", price: 0.05, quantity: 40 },
+          { name: "loonie", price: 1, quantity: 45 },
+          { name: "toonie", price: 2, quantity: 50 }
+        ]);
+      });
+    });
+  });
 
   describe("DispenseInventory(payment,item)", () => {
     //05

@@ -10,17 +10,7 @@ class vendingMachineStats {
     console.log(this.products);
     return this.products;
   }
-  refillOneItem(item) {
-    const currentItem = this.products.map(product => {
-      if (product.name === item) {
-        product.quantity = this.maxQuantity;
-        return product;
-      }
-      return product;
-    });
 
-    return currentItem;
-  }
   refillInventory() {
     const refilledInventory = this.products.map(product => {
       return {
@@ -30,6 +20,17 @@ class vendingMachineStats {
     });
     return refilledInventory;
   }
+  refillOneItem(item) {
+    const currentItem = this.products.map(product => {
+      if (product.name === item) {
+        return { ...product, quantity: this.maxQuantity };
+      }
+      return product;
+    });
+
+    return currentItem;
+  }
+
   resupplyChange() {
     const resuppliedChange = this.initialCoins.map(coin => {
       return {
@@ -38,6 +39,16 @@ class vendingMachineStats {
       };
     });
     return resuppliedChange;
+  }
+  resupplyOneChange(coinType) {
+    const resuppliedOneChange = this.initialCoins.map(coin => {
+      if (coin.name === coinType) {
+        return { ...coin, quantity: this.maxChangeQuantity };
+      }
+      return coin;
+    });
+    console.log(resuppliedOneChange);
+    return resuppliedOneChange;
   }
 
   DispenseInventory(payment, item) {
