@@ -38,7 +38,7 @@
     },
     {
       "name": "nickel",
-      "price": 0.5,
+      "price": 0.05,
       "quantity": 40
     },
     {
@@ -50,11 +50,6 @@
       "name": "toonie",
       "price": 2,
       "quantity": 50
-    },
-    {
-      "name": "fiveDollars",
-      "price": 5,
-      "quantity": 55
     }
   ]
 }
