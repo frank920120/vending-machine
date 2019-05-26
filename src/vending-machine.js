@@ -47,7 +47,6 @@ class vendingMachineStats {
       }
       return coin;
     });
-    console.log(resuppliedOneChange);
     return resuppliedOneChange;
   }
 
