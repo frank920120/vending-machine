@@ -19,7 +19,7 @@ describe("vendingMachine", () => {
 
   describe("printInventory()", () => {
     //01
-    describe("when the user uses vendingMachine", () => {
+    describe("when user uses vendingMachine", () => {
       it("should return all the vendingMachine items", () => {
         expect(vendingMachine.subject.printInventory()).toEqual(
           vendingMachine.productsData
@@ -29,7 +29,7 @@ describe("vendingMachine", () => {
   });
   //02
   describe("refillInventory()", () => {
-    describe("when the inventory needs to be refilled", () => {
+    describe("when inventory needs to be refilled", () => {
       it("should return all the products with maxiumn quantity", () => {
         expect(vendingMachine.subject.refillInventory()).toEqual([
           { id: 1, name: "LV", cost: 2, quantity: 15 },
@@ -69,7 +69,7 @@ describe("vendingMachine", () => {
   });
   //05
   describe("resupplyOneChange(coinType)", () => {
-    describe("when one of the change type needs to be resupplied", () => {
+    describe("when one of the change types needs to be resupplied", () => {
       it("should return all the money with that changetype of maxiumn quantity", () => {
         expect(vendingMachine.subject.resupplyOneChange("quarter")).toEqual([
           { name: "quarter", price: 0.25, quantity: 100 },
@@ -84,7 +84,7 @@ describe("vendingMachine", () => {
 
   describe("DispenseInventory(payment,item)", () => {
     //06
-    describe("when user choose the item that is out of stock", () => {
+    describe("when user chooses the item that is out of stock", () => {
       it("should throw an error", () => {
         expect(() =>
           vendingMachine.subject.DispenseInventory(5, "Chanel")
@@ -92,7 +92,7 @@ describe("vendingMachine", () => {
       });
     });
     //07
-    describe("when user choose the item that does not exist", () => {
+    describe("when user chooses the item that does not exist", () => {
       it("should throw an error", () => {
         expect(() =>
           vendingMachine.subject.DispenseInventory(5, "hello")
@@ -100,7 +100,7 @@ describe("vendingMachine", () => {
       });
     });
     //08
-    describe("when user insert the money that is less than the item price", () => {
+    describe("when user inserts the money that is less than the item price", () => {
       it("should throw an error", () => {
         expect(() =>
           vendingMachine.subject.DispenseInventory(1, "Prada")
@@ -109,7 +109,7 @@ describe("vendingMachine", () => {
     });
 
     //09
-    describe("when user insert the correct payment", () => {
+    describe("when user inserts the correct payment", () => {
       it("should return the item with new quantity", () => {
         expect(vendingMachine.subject.DispenseInventory(2, "Gucci")).toEqual([
           { id: 1, name: "LV", cost: 2, quantity: 14 },
